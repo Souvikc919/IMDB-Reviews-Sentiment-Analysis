@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDB Sentiment Analysis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 IMDB Sentiment Analysis</h1>
+        <form method="post" action="/predict">
+            <textarea name="text" placeholder="Enter your movie review..." required>{{text if text else ''}}</textarea>
+            <select name="model">
+                <option value="svm">Linear SVM</option>
+                <option value="log_reg">Logistic Regression</option>
+                <option value="nb">MultinomialNB</option>
+            </select>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if result %}
+        <div class="result">
+            <h2>Prediction</h2>
+            <p><strong>Review:</strong> {{text}}</p>
+            <p><strong>Model:</strong> {{model}}</p>
+            <p><strong>Sentiment:</strong> <span class="{{ 'positive' if result == 'Positive' else 'negative' }}">{{result}}</span></p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
