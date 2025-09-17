@@ -9,5 +9,3 @@ This project predicts whether a given text review is **Positive** or **Negative*
 - Backend built with **FastAPI**.
 - Frontend with **HTML + CSS** for user interaction.
 - End-to-end structure (train → pickle → serve → predict).
-- Ready for deployment.
-
