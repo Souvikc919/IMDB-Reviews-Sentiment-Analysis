@@ -11,16 +11,3 @@ This project predicts whether a given text review is **Positive** or **Negative*
 - End-to-end structure (train → pickle → serve → predict).
 - Ready for deployment.
 
-## 📂 Project Structure
-sentiment-analysis-app/
-│── backend/
-│ ├── main.py # FastAPI backend
-│ ├── model.pkl # Trained ML model
-│ ├── vectorizer.pkl # TF-IDF vectorizer
-│── templates/
-│ ├── index.html # Input form
-│ ├── result.html # Prediction result page
-│── static/
-│ ├── style.css # Styling
-│── requirements.txt # Dependencies
-│── README.md # Documentation
